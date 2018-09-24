@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>С Днём рождения, Тимофей!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">  
+  <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet" type="text/css">
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link rel="stylesheet" href="style.css">  
+  <script>
+    window.open = function() {};
+    window.print = function() {};
+  </script>
+</head>
+
+<body style="color:#fff;">
+    <audio autoplay id="song" src="song.mp3" type="audio/mp3"></audio>
+    <script>
+        function play() {
+            var song = document.querySelector("#song");
+            if (song.duration > 0 && !song.paused) {
+                song.pause();
+            } else {
+                song.play();
+            }
+        }
+        function blow(element) {
+           var flame = element.querySelector('.flame');
+           if (flame) {
+               flame.style.visibility = "hidden";
+               setTimeout(function() {
+                flame.style.visibility = "visible";
+               }, Math.floor(Math.random() * 10000));
+           }
+        }
+    </script>
+    <center>    
+    <div class="cake">
+        <div class="plate"></div>
+        <div class="layer layer-bottom"></div>
+        <div class="layer layer-middle"></div>
+        <div class="layer layer-top"></div>
+        <div class="icing"></div>
+        <div class="drip drip1"></div>
+        <div class="drip drip2"></div>
+        <div class="drip drip3"></div>
+        <div onclick="blow(this)" class="candle candle-1">
+            <div class="flame"></div>
+        </div>
+        <div onclick="blow(this)" class="candle candle-2">
+            <div class="flame"></div>
+        </div>
+        <div onclick="blow(this)" class="candle candle-3">
+            <div class="flame"></div>
+        </div>
+        <div onclick="blow(this)" class="candle candle-4">
+            <div class="flame"></div>
+        </div>
+        <div onclick="blow(this)" class="candle candle-5">
+            <div class="flame"></div>
+        </div>
+        <div onclick="blow(this)" class="candle candle-6">
+            <div class="flame"></div>
+        </div>
+        <div onclick="blow(this)" class="candle candle-7">
+            <div class="flame"></div>
+        </div>
+        <div onclick="blow(this)" class="candle candle-8">
+            <div class="flame"></div>
+        </div>
+        <div onclick="blow(this)" class="candle candle-9">
+            <div class="flame"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="balloon">
+            <div onclick="play()"><span>☺</span>
+            </div>
+            <div onclick="play()"><span>Т</span>
+            </div>
+            <div onclick="play()"><span>И</span>
+            </div>
+            <div onclick="play()"><span>М</span>
+            </div>
+            <div onclick="play()"><span>А</span>
+            </div>
+            <div onclick="play()"><span>!</span>
+            </div>
+        </div>
+        <h1>С Днём рождения, Братишка!</h1>
+    </div>
+    </center>
+</body>
+</html>
